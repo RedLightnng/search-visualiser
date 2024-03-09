@@ -42,84 +42,94 @@ class _AppBodyState extends State<AppBody> {
       body: Center(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Text(
-                  'Welcome to Algorithm Visualizer!',
-                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                ),
-              ),
-              SizedBox(height: 20),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(context, '/binary');
-                },
-                child: Container(
-                  width: 500,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                      image: AssetImage('assets/binary_search.avif'),
-                      fit: BoxFit.fill,
-                    ),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    'Welcome to Search Algorithm Visualizer!',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Binary Search',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                ),
+
+                SizedBox(height: 20),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/binary');
+                  },
+                  child: Container(
+                    width: 500,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(
+                        image: AssetImage('assets/binary_search.avif'),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Binary Search',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Binary Search is a search algorithm that finds the position of a target value within a sorted array.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-              ),
-              SizedBox(height: 30),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,'/linear'
-                  );
-                },
-                child: Container(
-                  width: 500,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    image: DecorationImage(
-                      image: AssetImage('assets/linear_search.jpg'),
-                      fit: BoxFit.fill,
+                SizedBox(height: 20),
+                Text(
+                  'Binary Search is a search algorithm that finds the position of a target value within a sorted array.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16),
+                ),
+                SizedBox(height: 10),
+                Divider(
+                  thickness: 1,
+
+                  indent: 1,
+                ),
+                SizedBox(height: 10,),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,'/linear'
+                    );
+                  },
+                  child: Container(
+                    width: 500,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      image: DecorationImage(
+                        image: AssetImage('assets/linear_search.jpg'),
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Linear Search',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                    child: Center(
+                      child: Text(
+                        'Linear Search',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              SizedBox(height: 20),
-              Text(
-                'Linear Search is a simple search algorithm that sequentially checks each element of a list until it finds the target value.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-              ),
-            ],
+                SizedBox(height: 20),
+                Text(
+                  'Linear Search is a simple search algorithm that sequentially checks each element of a list until it finds the target value.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
           ),
         ),
       ),
