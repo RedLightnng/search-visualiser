@@ -1,6 +1,6 @@
 # search_visualiser
 
-A flutter project made to visualise and demonstrate various sorting algorithms like lienar search and binary search.
+A flutter project made to visualise and demonstrate various searching / sorting algorithms like linear search and binary search.
 
 ## Current Algorithms
 
