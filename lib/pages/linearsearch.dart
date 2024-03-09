@@ -163,11 +163,9 @@ class _VisualiseLinearSearchState extends State<VisualiseLinearSearch> {
                   style: TextStyle(fontSize: 18),
                 ),
               if(!targetFound)
-                Center(
-                  child: Text(
-                    "'$searchTarget' not found yet :(",
-                    style: TextStyle(fontSize: 18,),
-                  ),
+                Text(
+                  "'$searchTarget' has not been found yet :(",
+                  style: TextStyle(fontSize: 18),
                 ),
             ],
           ),
